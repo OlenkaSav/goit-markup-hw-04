@@ -140,8 +140,9 @@ header {
   color: var(--accent-colour);
 }
 .icon-email {
-  width: 40px;
-  height: 30px;
+  width: 16px;
+  height: 12px;
+  fill: grey;
 }
 
 .nav-site .link.current {
@@ -234,7 +235,7 @@ header {
   background-image: url(../images/diagram\ 1.svg);
 }
 .preferences-item:nth-child(4)::before {
-  background-image: url(../images/astronaut\ 1.svg);
+  background-image: url(../images/astronaut.svg);
 }
 
 /* Hide invisible
@@ -272,6 +273,13 @@ header {
   flex-wrap: wrap;
   margin-right: -30px;
 }
+.team-iconico {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  fill: grey;
+}
+
 .team > .team-card {
   flex-basis: calc(100% / 4 - 30px);
   margin-right: 30px;
