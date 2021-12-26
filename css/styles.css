@@ -19,6 +19,7 @@
   --team-background: #f5f4fa;
   --team-card-bg: #ffffff;
   --hero-button-hover: #188ce8;
+  --preferences-bg: #f5f4fa;
 }
 h1,
 h2,
@@ -138,17 +139,29 @@ header {
 .nav-contact .tel:focus {
   color: var(--accent-colour);
 }
+.icon-email {
+  width: 40px;
+  height: 30px;
+}
 
 .nav-site .link.current {
   color: var(--accent-colour);
 }
 /* Hero section */
 .hero-section {
-  background-color: #2f303a;
+  background-color: var(--section-backgroun-colour);
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-bg.jpg');
+}
+
 .hero-title {
   color: var(--text-white-accent-colour);
   font-weight: 900;
@@ -200,6 +213,30 @@ header {
 .preferences-item {
   width: 270px;
 }
+.preferences-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--preferences-bg);
+}
+.preferences-item:nth-child(1)::before {
+  background-image: url(../images/antenna\ 1.svg);
+}
+.preferences-item:nth-child(2)::before {
+  background-image: url(../images/clock\ 1.svg);
+}
+.preferences-item:nth-child(3)::before {
+  background-image: url(../images/diagram\ 1.svg);
+}
+.preferences-item:nth-child(4)::before {
+  background-image: url(../images/astronaut\ 1.svg);
+}
+
 /* Hide invisible
 .section-title.preferences,
 .projects-section {
@@ -244,6 +281,7 @@ header {
   border-color: var(--line-color);
   background-color: var(--team-card-bg);
   border-radius: 1px;
+  overflow: hidden;
 }
 .team-name {
   color: var(--title-text-colour);
@@ -337,7 +375,7 @@ header {
 
   display: inline-block;
   border-radius: 4px;
-  min-width: 70px;
+  /* min-width: 70px; */
   text-align: center;
 
   padding: 6px 22px;
@@ -422,19 +460,4 @@ header {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
-}
-
-.container-test {
-  width: 940px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  outline: chartreuse 2px solid;
-}
-.box {
-  height: 190px;
-  width: calc(50% - 20px);
-  margin: 10px;
-  outline: chartreuse 2px solid;
 }
