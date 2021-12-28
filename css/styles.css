@@ -20,6 +20,7 @@
   --team-card-bg: #ffffff;
   --hero-button-hover: #188ce8;
   --preferences-bg: #f5f4fa;
+  --team-icon-color: #afb1b8;
 }
 h1,
 h2,
@@ -139,12 +140,29 @@ header {
 .nav-contact .tel:focus {
   color: var(--accent-colour);
 }
+
+.icon-phone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--primary-text-colour);
+}
 .icon-email {
   width: 16px;
   height: 12px;
-  fill: grey;
-}
 
+  margin-right: 10px;
+  margin-top: 2px;
+  fill: var(--primary-text-colour);
+}
+.icon-phone:hover,
+.icon-phone:focus {
+  fill: var(--accent-colour);
+}
+.icon-email:hover,
+.icon-email:focus {
+  fill: var(--accent-colour);
+}
 .nav-site .link.current {
   color: var(--accent-colour);
 }
@@ -203,6 +221,9 @@ header {
 .hero-section.container,
 .container.projects,
 .container.preferences */
+.section.clients {
+  padding-top: 44px;
+}
 
 .footer-section.container {
   padding-bottom: 60px;
@@ -214,7 +235,20 @@ header {
 .preferences-item {
   width: 270px;
 }
-.preferences-item::before {
+.preferences-icon {
+  display: flex;
+  justify-content: center;
+}
+.preferences-thumb {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  background-color: var(--preferences-bg);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+/* .preferences-item::before {
   content: '';
   display: block;
   height: 120px;
@@ -236,7 +270,7 @@ header {
 }
 .preferences-item:nth-child(4)::before {
   background-image: url(../images/astronaut.svg);
-}
+} */
 
 /* Hide invisible
 .section-title.preferences,
@@ -273,13 +307,35 @@ header {
   flex-wrap: wrap;
   margin-right: -30px;
 }
-.team-icon {
-  display: inline-block;
+.team-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 16px auto 30px;
+}
+.team-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 0px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.icon-team {
+  display: flex;
   height: 20px;
   width: 20px;
-  fill: grey;
+  fill: var(--team-icon-color);
 }
-
+.team-link:hover,
+.team-link:focus {
+  background-color: var(--accent-colour);
+}
+.icon-team:hover,
+.icon-team:focus {
+  fill: white;
+}
 .team > .team-card {
   flex-basis: calc(100% / 4 - 30px);
   margin-right: 30px;
@@ -290,6 +346,9 @@ header {
   background-color: var(--team-card-bg);
   border-radius: 1px;
   overflow: hidden;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-name {
   color: var(--title-text-colour);
@@ -307,6 +366,29 @@ header {
   margin-top: 30px;
   margin-bottom: 30px;
   text-align: center;
+}
+/* Regular clients */
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.client-item {
+  display: block;
+  width: 170px;
+  height: 92px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--line-color);
+  border-radius: 4px;
+  padding: 16px 32px 16px 32px;
+}
+.icon-client {
+  display: inline-flex;
+  fill: #afb1b8;
+}
+.icon-client:hover,
+.icon-client:focus {
+  fill: var(--accent-colour);
 }
 
 /* Footer */
@@ -445,7 +527,11 @@ header {
   border-style: solid;
   border-color: var(--line-color);
 }
-
+.projects-item:hover,
+.projects-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .projects-item:nth-child(3n) {
   margin-right: 0;
 }
